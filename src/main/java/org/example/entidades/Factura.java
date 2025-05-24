@@ -1,6 +1,7 @@
 package org.example.entidades;
 
 import lombok.*;
+import org.example.enumerables.FormaPago;
 
 import java.time.LocalDate;
 @Getter

@@ -1,11 +1,12 @@
 package org.example;
 
+import org.example.configuracion.DatabaseConnection;
 import org.example.entidades.*;
 import org.example.enumerables.TipoPromocion;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-
+import java.sql.*;
 public class Main {
     public static void main(String[] args) {
         // Setup pais - provincias - localidades
@@ -139,9 +140,39 @@ public class Main {
         promo2.setDescripcionDescuento("Bebida gratis");
         promo2.setTipoPromocion(TipoPromocion.HAPPYHOUR);
         System.out.println(promo2);
-        Empresa em= Empresa.builder()
+       Empresa em= Empresa.builder()
                 .nombre("sl.sofi")
                 .build();
 
+
+
+
+
+//esto es lo que iba en la clase main_testConnection de coneccion a Base de Datos
+/*
+        try(Connection conn = DatabaseConnection.obtenerConexion();){
+            if(conn!=null){
+                String nombreGuardar = "Sofia";
+                String query = "INSERT INTO persona (nombre) VALUES (?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(query);){
+                    pstmt.setString(1, nombreGuardar);
+                    pstmt.executeUpdate();
+                }
+
+                String query2 = "SELECT id,nombre FROM persona";
+                try(PreparedStatement pstmt = conn.prepareStatement(query2);
+                    ResultSet rs = pstmt.executeQuery();){
+                    while (rs.next()){
+                        int id = rs.getInt("id");
+                        String nombre = rs.getString("nombre");
+                        System.out.println("ID " + id + " | Nombre: " + nombre);
+                    }
+                }
+            }
+        }catch (SQLException ex){
+            System.out.println("Error de base de datos: " + ex.getMessage());
+        }
+
+         */
     }
 }

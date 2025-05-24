@@ -19,7 +19,7 @@ public class ArticuloManufacturadoDetalle {
     public String toString() {
         return "ArticuloManufacturadoDetalle{" +
                 "cantidad=" + cantidad +
-                ", articuloManufacturado=" + articuloInsumo.getDenominacion() +
+                //", articuloManufacturado=" + articuloInsumo.getDenominacion() +
                 '}';
     }
 }

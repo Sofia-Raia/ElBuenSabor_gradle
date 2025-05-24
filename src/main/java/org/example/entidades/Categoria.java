@@ -42,6 +42,10 @@ public class Categoria {
         subCategorias.add(categoria);
         categoria.setCategoriaPadre(this);
     }
+
+    private void setCategoriaPadre(Categoria categoriaPadre) {
+    }
+
     public void removeCategoria(Categoria categoria) {
         subCategorias.remove(categoria);
         categoria.setCategoriaPadre(null);

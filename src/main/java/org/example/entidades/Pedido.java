@@ -1,8 +1,8 @@
 package org.example.entidades;
 
-import enumerables.Estado;
-import enumerables.FormaPago;
-import enumerables.TipoEnvio;
+import org.example.enumerables.Estado;
+import org.example.enumerables.FormaPago;
+import org.example.enumerables.TipoEnvio;
 import lombok.*;
 
 import java.time.LocalDate;
